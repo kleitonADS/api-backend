@@ -53,7 +53,7 @@ Essa rota autentica um usuário com base no e-mail e senha fornecidos.
     "email": "usuario1@example.com",
     "senha": "123456"
 {
-
+```
 
 
 ## Endpoints
@@ -70,6 +70,7 @@ Essa rota autentica um usuário com base no e-mail e senha fornecidos.
     "email": "usuario1@example.com",
     "senha": "123456"
 {
+```
 
 
 
