@@ -58,19 +58,32 @@ Essa rota autentica um usuário com base no e-mail e senha fornecidos.
 
 ## Endpoints
 
-### 1. **Login de Usuário**
+### 2. Registro de Novo Usuário
 
-**Rota:** `POST /api/acessar`
+**Rota:** `POST /api/registrar`
 
 Essa rota autentica um usuário com base no e-mail e senha fornecidos.
 
 #### Requisição:
 ```json
 {
-    "email": "usuario1@example.com",
-    "senha": "123456"
-{
+    "email": "novo_usuario@example.com",
+    "senha": "senha123",
+    "dt_nascimento": "2000-01-01"
+}
 ```
+
+## Endpoints
+
+### 3. Listagem de Usuários
+
+**Rota:** GET /api/listagem-usuarios
+
+Essa rota autentica um usuário com base no e-mail e senha fornecidos.
+
+#### Requisição:
+GET /api/listagem-usuarios?page=1&per_page=5
+
 
 
 
