@@ -52,7 +52,26 @@ Essa rota autentica um usuário com base no e-mail e senha fornecidos.
 {
     "email": "usuario1@example.com",
     "senha": "123456"
-}```
+{
+
+
+
+## Endpoints
+
+### 1. **Login de Usuário**
+
+**Rota:** `POST /api/acessar`
+
+Essa rota autentica um usuário com base no e-mail e senha fornecidos.
+
+#### Requisição:
+```json
+{
+    "email": "usuario1@example.com",
+    "senha": "123456"
+{
+
+
 
 
 
