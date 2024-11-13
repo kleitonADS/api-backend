@@ -64,7 +64,8 @@ Success (200)
   "data": {
     "email": "usuario1@example.com"
   }
-}```
+}
+```
 
 Error (401): Invalid credentials.
 ```json
@@ -72,7 +73,8 @@ Error (401): Invalid credentials.
 {
   "status": "error",
   "message": "Credenciais inválidas"
-}```
+}
+```
 
 ### 2. POST /api/registrar
 This endpoint registers a new user with an email, password, and birth date. It also validates that the user is at least 18 years old.
@@ -92,7 +94,8 @@ Example Request
   "email": "newuser@example.com",
   "dt_nascimento": "2000-01-01",
   "senha": "newpassword123"
-}```
+}
+```
 
 Response
 Success (201)
@@ -107,7 +110,8 @@ Success (201)
     "dt_nascimento": "2000-01-01",
     "senha": "newpassword123"
   }
-}```
+}
+```
 
 Error (400): If the email is already registered or if the user is under 18 years old.
 ```json
@@ -116,6 +120,7 @@ Error (400): If the email is already registered or if the user is under 18 years
   "status": "error",
   "message": "O e-mail informado já está registrado."
 }
+```
 or
 
 
@@ -124,7 +129,8 @@ or
 {
   "status": "error",
   "message": "Você precisa ter 18 anos ou mais para se registrar."
-}```
+}
+```
 
 ### 3. GET /api/listagem-usuarios
 This endpoint retrieves a paginated list of all registered users.
@@ -178,7 +184,8 @@ Success (200)
     "per_page": 5,
     "total": 10
   }
-}```
+}
+```
 
 
 
