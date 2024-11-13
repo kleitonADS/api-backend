@@ -58,7 +58,6 @@ Essa rota autentica um usuário com base no e-mail e senha fornecidos.
 **Response**
 Success (200)
 ```json
-Copy code
 {
   "status": "success",
   "message": "Login bem-sucedido",
@@ -66,14 +65,16 @@ Copy code
     "email": "usuario1@example.com"
   }
 }```
+
 Error (401): Invalid credentials.
-json
-Copy code
+```json
+
 {
   "status": "error",
   "message": "Credenciais inválidas"
-}
-2. POST /api/registrar
+}```
+
+### 2. POST /api/registrar
 This endpoint registers a new user with an email, password, and birth date. It also validates that the user is at least 18 years old.
 
 Request
@@ -84,17 +85,20 @@ email (string) required: The email of the user (must be a valid email format).
 dt_nascimento (date) required: The date of birth of the user (must be a valid date format).
 senha (string) required: The password of the user (minimum length: 6 characters).
 Example Request
-json
-Copy code
+
+```json
+
 {
   "email": "newuser@example.com",
   "dt_nascimento": "2000-01-01",
   "senha": "newpassword123"
-}
+}```
+
 Response
 Success (201)
-json
-Copy code
+
+```json
+
 {
   "status": "success",
   "message": "Usuário registrado com sucesso!",
@@ -103,23 +107,26 @@ Copy code
     "dt_nascimento": "2000-01-01",
     "senha": "newpassword123"
   }
-}
+}```
+
 Error (400): If the email is already registered or if the user is under 18 years old.
-json
-Copy code
+```json
+
 {
   "status": "error",
   "message": "O e-mail informado já está registrado."
 }
 or
 
-json
-Copy code
+
+```json
+
 {
   "status": "error",
   "message": "Você precisa ter 18 anos ou mais para se registrar."
-}
-3. GET /api/listagem-usuarios
+}```
+
+### 3. GET /api/listagem-usuarios
 This endpoint retrieves a paginated list of all registered users.
 
 Request
@@ -130,12 +137,13 @@ page (integer) optional: The page number for pagination (default is 1).
 per_page (integer) optional: The number of users to return per page (default is 5).
 Example Request
 http
-Copy code
+
 GET /api/listagem-usuarios?page=2&per_page=5
 Response
 Success (200)
-json
-Copy code
+
+```json
+
 {
   "status": "success",
   "data": [
@@ -170,8 +178,7 @@ Copy code
     "per_page": 5,
     "total": 10
   }
-}
-
+}```
 
 
 
