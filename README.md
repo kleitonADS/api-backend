@@ -55,9 +55,9 @@ Essa rota autentica um usuário com base no e-mail e senha fornecidos.
 {
 ```
 
-Response
+**Response**
 Success (200)
-json
+```json
 Copy code
 {
   "status": "success",
@@ -65,7 +65,7 @@ Copy code
   "data": {
     "email": "usuario1@example.com"
   }
-}
+}```
 Error (401): Invalid credentials.
 json
 Copy code
